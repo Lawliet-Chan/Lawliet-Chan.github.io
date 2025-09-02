@@ -22,14 +22,29 @@
 
 ```
 Lawliet-Chan.github.io/
-├── index.html          # 主页面
-├── styles.css          # 样式文件
-├── script.js           # JavaScript功能
-├── README.md           # 项目说明
-└── .git/               # Git仓库
+├── index.html              # 主页面
+├── stories.html            # 小说故事专栏页面
+├── tech.html               # 技术思考专栏页面
+├── philosophy.html         # 政史哲思专栏页面
+├── styles.css              # 样式文件
+├── script.js               # 主页面JavaScript功能
+├── column-loader.js        # 专栏页面文章加载器
+├── markdown-loader.js      # Markdown文件解析器
+├── asset/
+│   └── lawliet.jpeg        # 头像图片
+├── articles/               # 文章文件夹
+│   ├── stories/            # 小说故事文章
+│   ├── tech/               # 技术思考文章
+│   └── philosophy/         # 政史哲思文章
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # GitHub Actions部署配置
+└── README.md               # 项目说明
 ```
 
 ## 🚀 快速开始
+
+### 本地开发
 
 1. **克隆仓库**
    ```bash
@@ -37,13 +52,9 @@ Lawliet-Chan.github.io/
    cd Lawliet-Chan.github.io
    ```
 
-2. **打开网站**
-   - 直接在浏览器中打开 `index.html` 文件
-   - 或者使用本地服务器（推荐）
-
-3. **本地开发服务器**
+2. **本地开发服务器**
    ```bash
-   # 使用Node.js serve包
+   # 使用Node.js serve包（推荐）
    npx serve . -p 8000
    
    # 使用Python
@@ -53,14 +64,48 @@ Lawliet-Chan.github.io/
    php -S localhost:8000
    ```
 
-4. **访问网站**
+3. **访问网站**
    在浏览器中打开 `http://localhost:8000`
+
+### 🌐 GitHub Pages 部署
+
+#### 自动部署（推荐）
+
+1. **启用 GitHub Pages**
+   - 进入仓库的 `Settings` → `Pages`
+   - 在 `Source` 选择 `GitHub Actions`
+
+2. **推送代码**
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+3. **自动部署**
+   - GitHub Actions 会自动构建和部署你的网站
+   - 部署完成后，网站将在 `https://lawliet-chan.github.io` 可访问
+
+#### 手动配置步骤
+
+1. **仓库设置**
+   - 确保仓库是公开的（Public）
+   - 仓库名必须是 `用户名.github.io` 格式
+
+2. **启用 GitHub Pages**
+   - 进入 `Settings` → `Pages`
+   - Source 选择 `Deploy from a branch`
+   - Branch 选择 `main` 或 `master`
+   - Folder 选择 `/ (root)`
+
+3. **等待部署**
+   - 通常需要几分钟时间
+   - 部署完成后会收到邮件通知
 
 ## 🌟 网站内容结构
 
 ### 📚 **小说故事版块**
 - **短篇小说** - 生活感悟和情感故事
-- **都市小说** - 现代都市生活的观察与思考
 - **奇幻小说** - 想象力的自由发挥
 
 ### 💻 **技术思考版块**
@@ -73,6 +118,38 @@ Lawliet-Chan.github.io/
 - **历史教训** - 以史为镜，避免重蹈覆辙
 - **社会哲学** - 现代社会的深层思考
 
+## 📝 文章管理
+
+### 添加新文章
+
+1. **创建Markdown文件**
+   - 在对应的文件夹中创建 `.md` 文件
+   - 例如：`articles/stories/新故事.md`
+
+2. **文章格式**
+   ```markdown
+   ---
+   title: 文章标题
+   date: 2024-01-01
+   category: stories
+   tags: [标签1, 标签2]
+   ---
+   
+   # 文章标题
+   
+   这里是文章内容...
+   ```
+
+3. **更新文件列表**
+   - 编辑 `column-loader.js` 中的 `getFileList()` 函数
+   - 将新文件名添加到对应分类的数组中
+
+### 文章分类
+
+- **小说故事** - 放在 `articles/stories/` 文件夹
+- **技术思考** - 放在 `articles/tech/` 文件夹  
+- **政史哲思** - 放在 `articles/philosophy/` 文件夹
+
 ## 🎨 自定义指南
 
 ### 修改内容
@@ -80,9 +157,8 @@ Lawliet-Chan.github.io/
 编辑 `index.html` 文件中的以下部分：
 
 - **个人信息** - 修改标题、描述和统计数据
-- **故事内容** - 更新故事标题、摘要和分类
-- **技术文章** - 修改技术思考的标题和描述
-- **哲学思考** - 更新政史哲思的内容
+- **专栏描述** - 更新各专栏的介绍文字
+- **头像** - 替换 `asset/lawliet.jpeg` 文件
 
 ### 修改样式
 
@@ -91,63 +167,7 @@ Lawliet-Chan.github.io/
 - **布局** - 调整Grid和Flexbox的配置
 - **动画** - 修改CSS动画和过渡效果
 
-### 添加新功能
 
-在 `script.js` 中添加新的交互功能：
-
-- 新的动画效果
-- 内容管理系统
-- 搜索功能
-- 评论系统
-
-## 📱 响应式断点
-
-- **桌面端** - 1200px及以上
-- **平板端** - 768px - 1199px
-- **移动端** - 767px及以下
-- **小屏手机** - 480px及以下
-
-## 🔧 主要功能
-
-### 导航栏
-- 固定顶部导航
-- 平滑滚动到锚点
-- 移动端汉堡菜单
-- 滚动时自动隐藏/显示
-
-### 英雄部分
-- 引人注目的标题和描述
-- 行动号召按钮
-- 渐变背景效果
-
-### 关于我
-- 个人介绍文本
-- 统计数据展示
-- 响应式布局
-
-### 内容展示
-- 故事卡片网格布局
-- 技术思考卡片设计
-- 哲学思辨内容展示
-- 悬停动画效果
-
-### 交互功能
-- 卡片悬停效果
-- 按钮点击动画
-- 滚动到顶部按钮
-- 通知系统
-
-### 额外功能
-- 页面加载动画
-- 键盘导航支持
-- 平滑滚动
-
-## 🔧 浏览器支持
-
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
 
 ## 📝 许可证
 
