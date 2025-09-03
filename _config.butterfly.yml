@@ -1,0 +1,166 @@
+# Butterfly 主题配置文件
+
+# 网站信息
+# title: Lawliet Chan
+# description: '一个专注于分享故事、思考和技术见解的个人网站'
+# keywords: '个人博客,技术思考,小说故事,政史哲思'
+# author: Lawliet Chan
+# language: zh-CN
+# timezone: 'Asia/Shanghai'
+
+disable_top_img: false
+top_img: orange
+
+# 主頁subtitle
+subtitle:
+  enable: true
+  # Typewriter Effect (打字效果)
+  effect: true
+  # Customize typed.js
+  # https://github.com/mattboldt/typed.js/#customization
+  typed_option:
+  # source 調用第三方服務
+  # false 關閉調用
+  # 1  調用一言網的一句話（簡體） https://hitokoto.cn/
+  # 2  調用一句網（簡體） http://yijuzhan.com/
+  # 3  調用今日詩詞（簡體） https://www.jinrishici.com/
+  # subtitle 會先顯示 source , 再顯示 sub 的內容
+  source: true
+  # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
+  sub:
+    - 天有常道，地有常数，君子有常体
+    - 大天而思之，孰与物畜而制之！从天而颂之，孰与制天命而用之！
+
+
+# 导航菜单
+menu:
+  首页: / || fas fa-home
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  归档: /archives/ || fas fa-archive
+  关于: /about/ || fas fa-user
+
+# 首页设置
+index_img: 
+  enable: true
+  local: true
+  url: /images/lawliet.jpeg
+  position: center
+  size: cover
+  repeat: no-repeat
+  mask: true
+  mask_opacity: 0.3
+
+favicon: /images/lawliet.jpeg
+
+# 头像设置
+avatar:
+  img: /images/lawliet.jpeg
+  effect: false
+
+# 社交链接
+social:
+  GitHub: https://github.com/Lawliet-Chan || fab fa-github
+
+# 文章设置
+post:
+  title:
+    enable: true
+    level: 1
+  subtitle:
+    enable: false
+    level: 2
+  meta:
+    page:
+      date_type: both
+      date_format: YYYY-MM-DD
+      categories: true
+      tags: true
+      update: false
+  permalink: false
+  copy:
+    enable: false
+  copyright:
+    enable: false
+
+# 代码高亮
+highlight_theme: mac
+code_copy:
+  enable: true
+  show_result: true
+
+# 搜索
+local_search:
+  enable: true
+
+# 评论系统（暂时关闭）
+comments:
+  use: 
+
+# 页脚设置
+footer:
+  owner:
+    enable: true
+    since: 2024
+  copyright: true
+  ICP:
+    enable: false
+
+# 侧边栏设置
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  card_author:
+    enable: true
+    description: "君子敬其在己者，而不慕其在天者，是以日进也"
+    button:
+      enable: true
+      icon: fab fa-github
+      text: 关注我
+      url: https://github.com/Lawliet-Chan
+  card_announcement:
+    enable: true
+    content: 欢迎来到我的个人博客！
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+  card_categories:
+    enable: true
+    limit: 8
+    expand: none
+    sort: name
+  card_tags:
+    enable: true
+    limit: 40
+    color: true
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 8
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    sort: date
+
+# 分类页面
+category_page:
+  enable: true
+  type: default
+  format: MMMM YYYY
+  order: -1
+  limit: 8
+
+# 标签页面
+tag_page:
+  enable: true
+  type: default
+  format: MMMM YYYY
+  order: -1
+  limit: 8
