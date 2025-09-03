@@ -1,5 +1,5 @@
 ---
-title: 延迟加密抗审查之难
+title: 延迟加密抗MEV之难
 date: 2025-09-03
 categories: 
   - 技术思考
