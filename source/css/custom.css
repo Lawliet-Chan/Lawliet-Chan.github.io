@@ -1,0 +1,85 @@
+/* 自定义订阅提示样式 */
+.subscribe-prompt {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px 0;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.subscribe-prompt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.subscribe-prompt h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4em;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe-prompt p {
+    margin: 10px 0;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe-prompt .rss-link {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 10px 5px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255,255,255,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe-prompt .rss-link:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: white;
+    text-decoration: none;
+}
+
+.subscribe-prompt .rss-icon {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .subscribe-prompt {
+        margin: 20px 0;
+        padding: 15px;
+    }
+    
+    .subscribe-prompt h3 {
+        font-size: 1.2em;
+    }
+    
+    .subscribe-prompt .rss-link {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+}

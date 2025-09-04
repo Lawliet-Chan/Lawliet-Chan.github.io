@@ -112,6 +112,10 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
 
+# 自定义CSS
+custom_css:
+  - css/custom.css
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

@@ -34,3 +34,18 @@ Radius接收到加密交易的时候即会做出排序承诺(order commitment)�
 
 
 以上，这些可能出现的问题在radius目前给出的方案中都没有见到明确的解决方案。
+
+---
+
+*本文探讨了延迟加密在抗MEV方面的挑战，正如棘刺雕猴在生态系统中的复杂地位一样，技术解决方案往往带来新的问题。*
+
+<div class="subscribe-prompt">
+  <h3>📧 喜欢这篇文章？</h3>
+  <p>订阅我的博客，第一时间收到最新技术思考和原创故事！</p>
+  <a href="/subscribe/" class="rss-link">
+    <i class="fas fa-rss rss-icon"></i>立即订阅
+  </a>
+  <a href="/atom.xml" class="rss-link">
+    <i class="fas fa-rss rss-icon"></i>RSS订阅
+  </a>
+</div>
