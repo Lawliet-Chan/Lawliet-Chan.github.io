@@ -63,10 +63,7 @@ PBS作为以太坊的重要创新，其复杂性正如棘刺雕猴在自然界�
 <div class="subscribe-prompt">
   <h3>📧 喜欢这篇文章？</h3>
   <p>订阅我的博客，第一时间收到最新技术思考和原创故事！</p>
-  <a href="/subscribe/" class="rss-link">
-    <i class="fas fa-rss rss-icon"></i>立即订阅
-  </a>
-  <a href="/atom.xml" class="rss-link">
-    <i class="fas fa-rss rss-icon"></i>RSS订阅
+  <a href="/subscribe/" class="subscribe-link">
+    <i class="fas fa-envelope subscribe-icon"></i>邮件订阅
   </a>
 </div>

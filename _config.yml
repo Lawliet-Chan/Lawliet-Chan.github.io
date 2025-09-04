@@ -101,17 +101,6 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: butterfly
 
-# RSS Feed
-feed:
-  enable: true
-  type: atom
-  path: atom.xml
-  limit: 20
-  hub:
-  content: true
-  content_limit: 140
-  content_limit_delim: ' '
-
 # 自定义CSS
 custom_css:
   - css/custom.css

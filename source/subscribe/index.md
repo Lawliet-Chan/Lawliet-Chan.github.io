@@ -4,32 +4,28 @@ date: 2024-01-20
 type: "subscribe"
 ---
 
-# 📧 订阅我的博客
+# 📧 邮件订阅我的博客
 
-感谢您对我的博客感兴趣！通过订阅，您将第一时间收到我的最新文章更新。
+感谢您对我的博客感兴趣！通过邮件订阅，您将第一时间收到我的最新文章更新。
 
-## 🔔 订阅方式
+## 🔔 邮件订阅
 
-### 1. RSS订阅（推荐）
-使用RSS阅读器订阅我的博客，这是最便捷的方式：
+### 订阅方式
+请在下方输入您的邮箱地址，我们会在有新文章发布时及时通知您：
 
-- **RSS地址**：`https://lawliet-chan.github.io/atom.xml`
-- **推荐阅读器**：
-  - [Feedly](https://feedly.com) - 网页版和移动端
-  - [Inoreader](https://www.inoreader.com) - 功能丰富
-  - [Reeder](https://reederapp.com) - Mac/iOS用户推荐
-
-### 2. 浏览器订阅
-大多数现代浏览器都支持RSS订阅：
-1. 访问 [RSS链接](https://lawliet-chan.github.io/atom.xml)
-2. 浏览器会提示您添加订阅
-3. 选择您喜欢的RSS阅读器
-
-### 3. 邮件订阅
-如果您希望通过邮件接收更新，可以：
-1. 使用支持RSS的邮件客户端
-2. 添加RSS地址到您的邮件应用
-3. 设置自动检查更新频率
+<div class="email-subscribe-form">
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="subscribe-form">
+    <div class="form-group">
+      <input type="email" name="email" placeholder="请输入您的邮箱地址" required class="email-input">
+      <input type="hidden" name="subject" value="博客订阅申请">
+      <input type="hidden" name="message" value="用户申请订阅博客更新">
+    </div>
+    <button type="submit" class="subscribe-btn">
+      <i class="fas fa-envelope"></i> 立即订阅
+    </button>
+  </form>
+  <p class="subscribe-note">我们承诺保护您的隐私，不会向第三方分享您的邮箱地址。</p>
+</div>
 
 ## 📝 订阅内容
 

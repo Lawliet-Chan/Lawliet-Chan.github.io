@@ -38,7 +38,6 @@ menu:
   分类: /categories/ || fas fa-folder-open
   标签: /tags/ || fas fa-tags
   归档: /archives/ || fas fa-archive
-  订阅: /subscribe/ || fas fa-rss
   关于: /about/ || fas fa-user
 
 # 首页设置
@@ -62,14 +61,6 @@ avatar:
 # 社交链接
 social:
   GitHub: https://github.com/Lawliet-Chan || fab fa-github
-  RSS: /atom.xml || fas fa-rss
-
-# RSS订阅提示
-rss:
-  enable: true
-  icon: fas fa-rss
-  text: 订阅我的博客
-  url: /atom.xml
 
 # 文章设置
 post:
