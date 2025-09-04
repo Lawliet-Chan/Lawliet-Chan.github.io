@@ -61,6 +61,7 @@ avatar:
 # 社交链接
 social:
   GitHub: https://github.com/Lawliet-Chan || fab fa-github
+  RSS: /atom.xml || fas fa-rss
 
 # 文章设置
 post:
