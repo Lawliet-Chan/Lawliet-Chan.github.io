@@ -5,3 +5,7 @@
 - <meta name="twitter:card" content="summary_large_image">
 - <meta name="twitter:site" content="@LawlietChan">
 - <meta name="twitter:creator" content="@LawlietChan">
+- <meta property="og:image" content="https://lawliet-chan.github.io/images/lawliet.jpeg">
+- <meta property="og:image:width" content="1200">
+- <meta property="og:image:height" content="630">
+- <meta property="og:image:type" content="image/jpeg">

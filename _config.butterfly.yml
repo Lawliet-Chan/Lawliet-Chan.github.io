@@ -11,7 +11,7 @@
 # Open Graph 设置（用于社交媒体分享）
 og:
   enable: true
-  image: /images/lawliet.jpeg
+  image: https://lawliet-chan.github.io/images/lawliet.jpeg
   twitter_card: summary_large_image
   twitter_id: 
   twitter_site: 

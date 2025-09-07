@@ -4,7 +4,7 @@ date: 2025-09-03
 categories: 
   - 技术思考
 tags: [区块链, MEV]
-cover: /images/VDF.png
+cover: https://lawliet-chan.github.io/images/VDF.png
 ---
 
 简介：radius使用PVDE（时间锁 + zk) 的方式来加密交易池，来削弱MEV攻击的可能性。即，破解出时间锁之前是看不到交易内容的，便无法进行MEV攻击。
