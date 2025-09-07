@@ -155,6 +155,159 @@
     font-size: 1.1em;
 }
 
+/* 微信分享功能样式 */
+.wechat-share-btn {
+    background: #07c160;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    margin: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(7, 193, 96, 0.3);
+}
+
+.wechat-share-btn:hover {
+    background: #06ad56;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(7, 193, 96, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.wechat-share-btn i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+/* 分享按钮组 */
+.share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.share-buttons h4 {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 15px 0;
+    color: #495057;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* 其他分享按钮样式 */
+.qq-share-btn {
+    background: #12b7f5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    margin: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(18, 183, 245, 0.3);
+}
+
+.qq-share-btn:hover {
+    background: #0ea5e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(18, 183, 245, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.weibo-share-btn {
+    background: #e6162d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    margin: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(230, 22, 45, 0.3);
+}
+
+.weibo-share-btn:hover {
+    background: #d0142a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 22, 45, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.qzone-share-btn {
+    background: #ffc107;
+    color: #212529;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    margin: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+}
+
+.qzone-share-btn:hover {
+    background: #ffb300;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+    color: #212529;
+    text-decoration: none;
+}
+
+.twitter-share-btn {
+    background: #1da1f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    margin: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3);
+}
+
+.twitter-share-btn:hover {
+    background: #0d8bd9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(29, 161, 242, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .email-subscribe-form {
@@ -175,5 +328,23 @@
         display: block;
         margin: 10px 0;
         text-align: center;
+    }
+    
+    .share-buttons {
+        padding: 15px;
+    }
+    
+    .share-buttons h4 {
+        font-size: 14px;
+    }
+    
+    .wechat-share-btn,
+    .qq-share-btn,
+    .weibo-share-btn,
+    .qzone-share-btn,
+    .twitter-share-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+        margin: 3px;
     }
 }

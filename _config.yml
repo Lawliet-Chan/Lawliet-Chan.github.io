@@ -101,9 +101,11 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: butterfly
 
-# 自定义CSS
+# 自定义CSS和JS
 custom_css:
   - css/custom.css
+custom_js:
+  - js/share.js
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

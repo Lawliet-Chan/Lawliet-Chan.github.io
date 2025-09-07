@@ -82,6 +82,17 @@ post:
     enable: false
   copyright:
     enable: false
+  # 分享功能
+  share:
+    enable: true
+    wechat: true
+    qq: true
+    weibo: true
+    qzone: true
+    facebook: false
+    twitter: true
+    linkedin: false
+    pinterest: false
 
 # 代码高亮
 highlight_theme: mac
