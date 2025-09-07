@@ -75,13 +75,31 @@
         return '来自 Lawliet Chan 的精彩文章';
     }
     
+    function getArticleImage() {
+        // 尝试获取文章封面图
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        if (ogImage) {
+            return ogImage.getAttribute('content');
+        }
+        
+        // 尝试获取文章中的第一张图片
+        const articleImg = document.querySelector('.post-content img, .article-content img, .entry-content img');
+        if (articleImg) {
+            return articleImg.src;
+        }
+        
+        // 默认头像
+        return window.location.origin + '/images/lawliet.jpeg';
+    }
+    
     // 分享到微信朋友圈
     window.shareToWechat = function() {
         const url = window.location.href;
         const title = document.title || 'Lawliet Chan 的文章';
+        const image = getArticleImage();
         
         // 创建分享链接
-        const shareUrl = `https://www.addtoany.com/add_to/wechat?linkurl=${encodeURIComponent(url)}&linkname=${encodeURIComponent(title)}`;
+        const shareUrl = `https://www.addtoany.com/add_to/wechat?linkurl=${encodeURIComponent(url)}&linkname=${encodeURIComponent(title)}&linkimage=${encodeURIComponent(image)}`;
         
         // 打开分享窗口
         openShareWindow(shareUrl, '微信分享');
@@ -95,8 +113,9 @@
         const url = window.location.href;
         const title = document.title || 'Lawliet Chan 的文章';
         const description = getArticleDescription();
+        const image = getArticleImage();
         
-        const shareUrl = `https://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
+        const shareUrl = `https://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}&pics=${encodeURIComponent(image)}`;
         
         openShareWindow(shareUrl, 'QQ分享');
     };
@@ -105,8 +124,9 @@
     window.shareToWeibo = function() {
         const url = window.location.href;
         const title = document.title || 'Lawliet Chan 的文章';
+        const image = getArticleImage();
         
-        const shareUrl = `https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
+        const shareUrl = `https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&pic=${encodeURIComponent(image)}`;
         
         openShareWindow(shareUrl, '微博分享');
     };
@@ -116,8 +136,9 @@
         const url = window.location.href;
         const title = document.title || 'Lawliet Chan 的文章';
         const description = getArticleDescription();
+        const image = getArticleImage();
         
-        const shareUrl = `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
+        const shareUrl = `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}&pics=${encodeURIComponent(image)}`;
         
         openShareWindow(shareUrl, 'QQ空间分享');
     };

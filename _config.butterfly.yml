@@ -8,6 +8,26 @@
 # language: zh-CN
 # timezone: 'Asia/Shanghai'
 
+# Open Graph 设置（用于社交媒体分享）
+og:
+  enable: true
+  image: /images/lawliet.jpeg
+  twitter_card: summary_large_image
+  twitter_id: 
+  twitter_site: 
+  google_plus: 
+  fb_admins: 
+  fb_app_id:
+
+# 文章封面设置
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  position: left
+  default_cover:
+    - /images/lawliet.jpeg 
+
 disable_top_img: false
 top_img: orange
 

@@ -1,0 +1,7 @@
+# 自定义head标签
+- <meta property="og:type" content="article">
+- <meta property="og:site_name" content="Lawliet Chan">
+- <meta property="og:locale" content="zh_CN">
+- <meta name="twitter:card" content="summary_large_image">
+- <meta name="twitter:site" content="@LawlietChan">
+- <meta name="twitter:creator" content="@LawlietChan">
