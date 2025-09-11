@@ -59,6 +59,7 @@ menu:
   标签: /tags/ || fas fa-tags
   归档: /archives/ || fas fa-archive
   关于: /about/ || fas fa-user
+  语言: /en/ || fas fa-globe
 
 # 首页设置
 index_img: 

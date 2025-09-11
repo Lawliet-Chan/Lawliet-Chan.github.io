@@ -11,6 +11,12 @@ author: Lawliet Chan
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
+# 多语言配置
+languages:
+  - zh-CN
+  - en
+default_lang: zh-CN
+
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://lawliet-chan.github.io
@@ -106,6 +112,7 @@ custom_css:
   - css/custom.css
 custom_js:
   - js/share.js
+  - js/geo-lang.js
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
