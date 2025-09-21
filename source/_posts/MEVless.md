@@ -2,9 +2,9 @@
 title: MEVless，MEV解决之道  
 date: 2025-09-21
 categories:
-- 技术思考
-  tags: [区块链, MEV]
-  cover: https://lawliet-chan.github.io/images/break_sandwich.png
+  - 技术思考
+tags: [区块链, MEV]
+cover: https://lawliet-chan.github.io/images/break_sandwich.png
 ---   
 ## 什么是MEV   
 MEV攻击（最大可提取价值攻击）是一种利用对交易排序的控制，通过重新排序、插入或排除特定交易，来获取额外利润的区块链行为。
