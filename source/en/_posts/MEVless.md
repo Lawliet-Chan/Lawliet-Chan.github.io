@@ -31,8 +31,8 @@ Here, the author does not recommend using the MEVless protocol at the L1 public 
 The principle of MEVless lies in constraining miners' behavior in transaction ordering. Our approach is to prevent miners from seeing specific transaction content during ordering. Transactions are ordered without miners seeing the transaction content, so even miners cannot perform MEV attacks since they don't know the specific transaction content. After ordering, the sequence needs to be published to the public network so other nodes and users are informed. At this point, the transaction order is finalized and included in the block, so when specific transaction content is submitted later, it will be executed according to this consensus order, with no room for MEV operations.
 
 We divide on-chain blocks into two types:
-- Ordering blocks, which only complete three things: receiving transaction hashes, deducting user prepayments, and providing transaction ordering commitments
-- Execution blocks, which are no different from ordinary blocks, only need to execute transactions according to the order committed in the previous ordering block
+- Ordering blocks, which only complete three things: receiving transaction hashes, deducting user prepayments, and providing transaction ordering commitments. The block production interval for ordering blocks can be shorter than execution blocks.
+- Execution blocks, which are no different from ordinary blocks, only need to execute transactions according to the order committed in the previous ordering block.
 
 These two types of blocks are produced alternately. For example, after the genesis block, blocks with odd block heights are ordering blocks, and blocks with even block heights are execution blocks.
 
@@ -73,3 +73,25 @@ In this process, DA provides an additional layer of protection for users and is 
 2. Compared to PBS, MEVless constrains from the source of MEV attacks - transaction ordering rights - by blocking attackers' access to transaction information before ordering, eliminating the prerequisite for attackers to perform MEV attacks.
 
 3. Conducive to decentralized execution and verifiable results. All MEV resistance methods and steps are hardcoded at the code level. As long as full nodes execute according to this code, the results are deterministic, making it difficult to perform MEV attacks in black box operations.
+
+4. Different from private mempool nodes, private mempools do not publish committed transaction ordering to all network nodes for consensus before knowing specific transaction content, while MEVless publishes committed transaction ordering to the entire network for consensus by each full node and writes it into blocks to ensure transactions are executed according to the committed order.
+
+## Speculative MEV
+
+In the previous discussion, we covered ordinary MEV attacks, but when attackers cannot see specific transaction content and cannot target specific transactions, they may adopt another attack method: speculative MEV attacks.
+
+This attack method is specifically manifested as: in MEVless, attackers can pre-position a transaction and submit the transaction hash to the chain. When the execution block begins and everyone submits transaction content, attackers can judge and calculate whether they have attack profits based on the transaction content submitted by other users. If there are profits, they submit their transaction content; if not, they choose to refuse to submit their transaction content, achieving sandwich attacks.
+
+This approach is difficult to succeed in the MEVless protocol because speculation requires costs. When attackers find it unprofitable and choose to abandon submitting their transaction content, the prepayment they paid when submitting the txHash earlier becomes wasted. The more attackers want their transactions to be ranked higher in the ordering, the greater the prepayment cost they need.
+
+**Then, some readers might wonder: if block-producing nodes themselves perform MEV attacks, then this prepayment is essentially paying themselves, completely offsetting the attack cost. In this case, how should it be solved?**
+
+## Consensus Layer Optimization
+
+Indeed, when block-producing nodes themselves perform MEV attacks, this prepayment will be covered by their own block rewards, so there will be no waste of attack costs. Our approach to weakening this speculative method is: making it impossible for miners to predict whether the next block will be produced by them, thus dramatically increasing their speculative costs. For this purpose, we need to add the following design at the consensus layer:
+
+- Access consensus: Proof of Burn L1-token, people must burn some L1 tokens (ETH/USDT/USDC) on L1 to gain the right to join the miner group.
+- Block production consensus: VDF based on L1 hash, we use the hash of the latest block on ETH L1 as input, generate random output values with VDF, and compare all miners' output values. The node with the maximum value of (output value * burned L1 token amount) will become the block-producing node for this round.
+- Final consensus: Upload the blocks produced in the above steps to ETH L1 every 3 ETH slots as a cycle, and select the fork with the maximum value of (output value * burned L1 token amount) as the finalized branch. Once finalized on ETH, it cannot be rolled back.
+
+Moreover, this consensus design has better MEV resistance as decentralization increases, because the more miners there are, the harder it is for each miner node to predict whether they will be the next block-producing node, and the higher their risk of speculative MEV.
