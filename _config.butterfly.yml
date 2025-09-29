@@ -82,6 +82,7 @@ avatar:
 # 社交链接
 social:
   GitHub: https://github.com/Lawliet-Chan || fab fa-github
+  X: https://x.com/ChenXinran1994 || fab fa-twitter
 
 # 文章设置
 post:
@@ -150,9 +151,9 @@ aside:
     description: "君子敬其在己者，而不慕其在天者，是以日进也"
     button:
       enable: true
-      icon: fab fa-github
+      icon: fab fa-twitter
       text: 关注我
-      url: https://github.com/Lawliet-Chan
+      url: https://x.com/ChenXinran1994
   card_announcement:
     enable: true
     content: '📧 欢迎来到我的个人博客！<br/>💡 想要第一时间收到更新？<br/>🔔 <a href="/subscribe/" style="color: #ff6b6b; text-decoration: none;">点击这里订阅我的博客</a>'
