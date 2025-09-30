@@ -4,7 +4,7 @@ date: 2025-09-30
 categories: 
     - 技术思考
 tags: [区块链, 分层架构, 共识]
-cover: /images/appchain_consensus.png
+cover: https://lawliet-chan.github.io/images/appchain_consensus.png
 ---
 
 
