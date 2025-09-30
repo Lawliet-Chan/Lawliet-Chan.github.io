@@ -32,7 +32,7 @@ cover: https://lawliet-chan.github.io/images/monkey.png
 ### 小偷死，大盗猖
 PBS作为以太坊生态的一项关键提案，常被视为MEV的“克星”。以太坊创始人Vitalik Buterin在其笔记中论证PBS能增强审查抵抗并缓解MEV问题。  
 他提出，通过分离块提议者和构建者角色，并引入拍卖机制，PBS可防止MEV泛滥。  
-（链接： https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance）      
+（链接： https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance ）      
 然而，这种乐观论断忽略了PBS的内在缺陷：它并未从源头约束矿工的交易定序权，而是对MEV利益进行再分配。   
 
 首先，PBS排序的结果缺乏客观验证其公正性的机制。没有一套既定的客观标准供提议者和构建者遵守，这意味着网络参与者无法确知他们是否真正避免了MEV攻击。例如，在构建块时，构建者可以隐秘地插入自己的交易，而提议者则可能选择性地接受这些块，却无从审计其公正性。
