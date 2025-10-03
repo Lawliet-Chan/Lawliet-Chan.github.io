@@ -2,9 +2,9 @@
 title: 从《独裁者手册》看区块链：POW篇
 date: 2025-10-03
 categories:
-- 技术思考
-  tags: [区块链, 共识]
-  cover: https://lawliet-chan.github.io/images/pow_dictator.png
+    - 技术思考
+tags: [区块链, 共识]
+cover: https://lawliet-chan.github.io/images/pow_dictator.png
 ---
 
 #### 独裁者手册核心大义
