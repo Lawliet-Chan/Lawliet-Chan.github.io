@@ -2,8 +2,8 @@
 title: 链原生与链扩展
 date: 2025-10-29
 categories:
-    - 技术思考
-    tags: [区块链]
+  - 技术思考
+tags: [区块链]
 cover: https://lawliet-chan.github.io/images/appchain.png
 ---
 
