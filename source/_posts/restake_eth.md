@@ -1,5 +1,5 @@
 ---
-title: restake，以太坊的催命符
+title: ReStake，以太坊的催命符
 date: 2025-11-03
 categories:
   - 技术思考
