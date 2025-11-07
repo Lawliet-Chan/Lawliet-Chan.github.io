@@ -3,7 +3,7 @@ title: 电磁波与郁金香
 date: 2025-10-15
 categories:
   - 政史哲思
-tags: [区块链]
+tags: [科技史]
 cover: https://lawliet-chan.github.io/images/electromagnetic.png
 --- 
 
