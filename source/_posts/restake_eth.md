@@ -3,7 +3,7 @@ title: ReStake，以太坊的催命符
 date: 2025-11-03
 categories:
   - 技术思考
-tags: [以太坊, POS]
+tags: [区块链, 以太坊, POS]
 cover: https://lawliet-chan.github.io/images/restake_eth.png
 ---
 
