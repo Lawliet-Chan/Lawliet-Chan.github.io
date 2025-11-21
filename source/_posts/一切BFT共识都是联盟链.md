@@ -12,7 +12,7 @@ cover: https://lawliet-chan.github.io/images/BFT.png
 在现在的Web3世界里，人们常常把“公链”和“BFT”绑死在一起，仿佛只要用了PBFT、HotStuff、CometBFT、Casper 等一众拜占庭容错算法，就能理直气壮地宣称自己是“去中心化的公链”。
 
 本文要揭露一个残酷却逻辑自洽的事实：  
-**凡是把BFT类算法（无论是经典PBFT，还是现代的HotStuff、DiemBFT、Grandpa、Casper FFG等finality gadget）当作核心fork choice机制的链，无论它多么大声喊自己是公链，本质上都是一条联盟链**——只不过联盟成员从显式的基金会白名单，变成了链上动态的“验证者集合 + 质押 + 治理”。
+**凡是把BFT类算法（无论是经典PBFT，还是现代的HotStuff、DiemBFT、Grandpa、Casper FFG等）当作核心fork choice机制的链，无论它多么大声喊自己是公链，本质上都是一条联盟链**——只不过联盟成员从显式的基金会白名单，变成了链上动态的“验证者集合 + 质押 + 治理”。
 
 ## 拜占庭将军问题的真正含义
 
