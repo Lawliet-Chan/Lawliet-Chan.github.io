@@ -29,7 +29,7 @@ cover:
     - /images/lawliet.jpeg 
 
 disable_top_img: false
-top_img: orange
+default_top_img: /images/cyberpunk-gpt.png
 
 # 主頁subtitle
 subtitle:
@@ -62,15 +62,7 @@ menu:
   语言: /en/ || fas fa-globe
 
 # 首页设置
-index_img: 
-  enable: true
-  local: true
-  url: /images/lawliet.jpeg
-  position: center
-  size: cover
-  repeat: no-repeat
-  mask: true
-  mask_opacity: 0.3
+index_img: /images/cyberpunk-gpt.png
 
 favicon: /images/lawliet.jpeg
 
